@@ -1,6 +1,6 @@
 <div class="search-box">
     <form action="http://searxng.au/search" method="get">
-      <input type="text" name="q" placeholder="Search..." class="search-input">
+      <input type="text" name="q" placeholder="Search..." class="search-input" autofocus>
     </form>
 </div>  
 <!-- Use a canvas element to show the matrix rain animation -->    
@@ -62,21 +62,13 @@ canvas {
 .canvas-container canvas {
   display: block;
 }
-
-
-
-/* 
-Canvas is a block level element and is used to display animation in this example.
-
-A complete list of block-level and inline elements can be found on MDN
-https://developer.mozilla.org/en/docs/Web/HTML/Block-level_elements 
-https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements
-*/</style>
+</style>
 
 <script>
 window.addEventListener('load', function() {
   var input = document.querySelector('.search-input');
   input.value = '';
+  input.focus();
 });
 
 const canvas1 = document.getElementById("canvas");
